@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="customerRepository"
+		class="com.training.springcore.repository.CustomerRepositoryImpl"></bean>
+
+	<!-- <bean id="customerRepository2" class="com.training.springcore.repository.CustomerRepositoryImpl"></bean> -->
+
+	<bean id="customerService"
+		class="com.training.springcore.service.CustomerServiceImpl"
+		autowire="byName">
+		<!-- <constructor-arg ref="customerRepository"></constructor-arg> -->
+		<!-- <property name="customerRepository" ref="customerRepository"></property> -->
+	</bean>
+
+</beans>
