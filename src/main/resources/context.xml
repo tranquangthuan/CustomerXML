@@ -7,7 +7,8 @@
 	<bean id="customerRepository"
 		class="com.training.springcore.repository.CustomerRepositoryImpl"></bean>
 
-	<!-- <bean id="customerRepository2" class="com.training.springcore.repository.CustomerRepositoryImpl"></bean> -->
+	<bean id="customerRepository2"
+		class="com.training.springcore.repository.CustomerRepositoryImpl"></bean>
 
 	<bean id="customerService"
 		class="com.training.springcore.service.CustomerServiceImpl"

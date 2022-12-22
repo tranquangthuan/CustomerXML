@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.training.springcore.model.Customer;
 import com.training.springcore.repository.CustomerRepository;
+import com.training.springcore.repository.CustomerRepositoryImpl;
 
 public class CustomerServiceImpl implements CustomerService {
 
@@ -27,6 +28,11 @@ public class CustomerServiceImpl implements CustomerService {
 	@Override
 	public List<Customer> findAll() {
 		return customerRepository.findAll();
+	}
+
+	//@Override
+	public List<Customer> findAllByNewInstance() {
+		return new CustomerRepositoryImpl().findAll();
 	}
 
 }
