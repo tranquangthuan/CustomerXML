@@ -17,6 +17,7 @@ public class AppMainContainer {
 		List<Customer> customers = customerService.findAll();
 		customers.forEach(System.out::println);
 
+		((ClassPathXmlApplicationContext) applicationContext).close();
 	}
 
 }

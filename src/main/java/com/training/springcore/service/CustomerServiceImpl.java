@@ -16,12 +16,12 @@ public class CustomerServiceImpl implements CustomerService {
 
 	public CustomerServiceImpl(CustomerRepository customerRepository) {
 		super();
-		System.out.println("DI By constructor 1 arg");
+		System.out.println("CustomerServiceImpl DI By constructor 1 arg");
 		this.customerRepository = customerRepository;
 	}
 
 	public void setCustomerRepository(CustomerRepository customerRepository) {
-		System.out.println("DI By Setter");
+		System.out.println("CustomerServiceImpl DI By Setter");
 		this.customerRepository = customerRepository;
 	}
 
@@ -30,7 +30,7 @@ public class CustomerServiceImpl implements CustomerService {
 		return customerRepository.findAll();
 	}
 
-	//@Override
+	// @Override
 	public List<Customer> findAllByNewInstance() {
 		return new CustomerRepositoryImpl().findAll();
 	}
