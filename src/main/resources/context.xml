@@ -7,18 +7,16 @@
 	<bean id="customerRepository"
 		class="com.training.springcore.repository.CustomerRepositoryImpl"></bean>
 
-	<bean id="customerRepository2"
-		class="com.training.springcore.repository.CustomerRepositoryImpl"></bean>
+<!-- 	<bean id="customerRepository2"
+		class="com.training.springcore.repository.CustomerRepositoryImpl"></bean> -->
 
 	<bean id="customerService"
-		class="com.training.springcore.service.CustomerServiceImpl"
-		autowire="byName">
+		class="com.training.springcore.service.CustomerServiceImpl" autowire="constructor">
 		<!-- <constructor-arg ref="customerRepository"></constructor-arg> -->
 		<!-- <property name="customerRepository" ref="customerRepository"></property> -->
 	</bean>
 
 	<bean id="personSingleton"
-		class="com.training.springcore.components.PersonSingleton"
-		scope="singleton"></bean>
+		class="com.training.springcore.components.PersonSingleton"></bean>
 
 </beans>
